@@ -14,8 +14,17 @@ export const useGetPokemonTypes = () => {
 
 export const useGetPokemonsByType = ({ id }: { id: number }) => {
   return useQuery({
-    queryKey: [queries.GET_POKEMON_BY_TYPE],
+    queryKey: [queries.GET_POKEMONS_BY_TYPE],
     queryFn: () => PokemonService.getPokemonsByType(id),
+    retry: false,
+    refetchOnWindowFocus: false,
+  });
+};
+
+export const useGetPokemon = ({ id }: { id: number }) => {
+  return useQuery({
+    queryKey: [queries.GET_POKEMON],
+    queryFn: () => PokemonService.getPokemon(id),
     retry: false,
     refetchOnWindowFocus: false,
   });

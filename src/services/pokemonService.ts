@@ -20,3 +20,9 @@ export const getPokemonsByType = async (
 ): Promise<AxiosResponse<{ pokemon: { pokemon: IPokemonType }[] }>> => {
   return axios.get(`/type/${id}`);
 };
+
+export const getPokemon = async (
+  id: number
+): Promise<AxiosResponse<IPokemon>> => {
+  return axios.get(`/pokemon/${id}`);
+};

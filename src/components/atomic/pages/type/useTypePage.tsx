@@ -1,14 +1,14 @@
 import { useGetPokemonsByType } from "@/hooks/usePokemon";
 import React from "react";
 
-type TypeProps = {
+type UseTypePageProps = {
   id: number;
 };
 
-const useType = ({ id }: TypeProps) => {
+const useTypePage = ({ id }: UseTypePageProps) => {
   const { data, isLoading, isError } = useGetPokemonsByType({ id });
 
   return { data, isLoading, isError };
 };
 
-export default useType;
+export default useTypePage;

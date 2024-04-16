@@ -1,7 +1,7 @@
 "use client";
 
 import { PokemonsList } from "../../organs";
-import useType from "./useType";
+import useType from "./useTypePage";
 
 type TypePageProps = {
   id: number;
