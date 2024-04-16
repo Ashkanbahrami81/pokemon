@@ -1,2 +1,3 @@
-export { default as Explore } from "./explore/Explore";
-export { default as Type } from "./type/Type";
+export { default as ExplorePage } from "./explore/ExplorePage";
+export { default as TypePage } from "./type/TypePage";
+export { default as PokemonPage } from "./pokemon/PokemonPage";

@@ -3,14 +3,14 @@
 import { PokemonsList } from "../../organs";
 import useType from "./useType";
 
-type TypeProps = {
+type TypePageProps = {
   id: number;
 };
-const Type = ({ id }: TypeProps) => {
+const TypePage = ({ id }: TypePageProps) => {
   const { data, isLoading, isError } = useType({ id });
   console.log(data?.data?.pokemon);
   return (
-    <div className="w-full min-h-screen text-white">
+    <main className="max-w-7xl w-full mx-auto flex min-h-screen flex-col items-center justify-between p-4 md:p-8">
       {isLoading ? (
         <div>Loading</div>
       ) : isError ? (
@@ -20,8 +20,8 @@ const Type = ({ id }: TypeProps) => {
       ) : (
         <div>There is no data</div>
       )}
-    </div>
+    </main>
   );
 };
 
-export default Type;
+export default TypePage;

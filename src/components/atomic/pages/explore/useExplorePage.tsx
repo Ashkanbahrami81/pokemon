@@ -1,6 +1,6 @@
 import { useGetPokemonTypes } from "@/hooks/usePokemon";
 
-const useExplore = () => {
+const useExplorePage = () => {
   const {
     data: typesData,
     isLoading: isLoadingTypes,
@@ -10,4 +10,4 @@ const useExplore = () => {
   return { typesData, isLoadingTypes, isTypesError };
 };
 
-export default useExplore;
+export default useExplorePage;

@@ -1,10 +1,10 @@
 "use client";
 
 import { TypesList } from "../../organs";
-import useExplore from "./useExplore";
+import useExplorePage from "./useExplorePage";
 
-const Explore = () => {
-  const { typesData, isLoadingTypes, isTypesError } = useExplore();
+const ExplorePage = () => {
+  const { typesData, isLoadingTypes, isTypesError } = useExplorePage();
   return (
     <main className="max-w-7xl w-full mx-auto flex min-h-screen flex-col items-center justify-between p-4 md:p-8">
       {isLoadingTypes ? (
@@ -20,4 +20,4 @@ const Explore = () => {
   );
 };
 
-export default Explore;
+export default ExplorePage;

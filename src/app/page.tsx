@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import { Explore } from "@/components/atomic/pages";
+import { ExplorePage } from "@/components/atomic/pages";
 
 export const metadata: Metadata = {
   title: "Pokemon",
@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return <Explore />;
+  return <ExplorePage />;
 }
