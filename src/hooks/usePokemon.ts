@@ -21,9 +21,9 @@ export const useGetPokemonsByType = ({ id }: { id: number }) => {
   });
 };
 
-export const useGetPokemon = ({ id }: { id: number }) => {
+export const useGetPokemon = ({ id }: { id: number | string }) => {
   return useQuery({
-    queryKey: [queries.GET_POKEMON],
+    queryKey: [queries.GET_POKEMON, id],
     queryFn: () => PokemonService.getPokemon(id),
     retry: false,
     refetchOnWindowFocus: false,

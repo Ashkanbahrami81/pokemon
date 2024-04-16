@@ -5,7 +5,7 @@ type Props = {
 };
 
 const page = ({ params }: Props) => {
-  return <PokemonPage id={Number(params?.id)} />;
+  return <PokemonPage id={params?.id} />;
 };
 
 export default page;

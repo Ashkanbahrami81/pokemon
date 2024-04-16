@@ -1,20 +1,22 @@
 "use client";
 
 import usePokemonPage from "./usePokemonPage";
-import { PokemonChart } from "../../atoms";
+import { Loader, PokemonChart } from "../../atoms";
 import { PokemonDetails } from "../../organs";
 
 type PokemonPageProps = {
-  id: number;
+  id: number | string;
 };
 
 const PokemonPage = ({ id }: PokemonPageProps) => {
   const { data, isLoading, isError } = usePokemonPage({ id });
-  console.log(data?.data?.abilities);
+
   return (
     <main className="max-w-7xl w-full mx-auto flex min-h-screen flex-col items-center justify-between p-4 md:p-8">
       {isLoading ? (
-        <div>Loading</div>
+        <div className="w-full min-h-screen flex items-center justify-center">
+          <Loader />
+        </div>
       ) : isError ? (
         <div>We ran into some issues</div>
       ) : data?.data ? (

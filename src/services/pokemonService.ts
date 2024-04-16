@@ -22,7 +22,7 @@ export const getPokemonsByType = async (
 };
 
 export const getPokemon = async (
-  id: number
+  id: number | string
 ): Promise<AxiosResponse<IPokemon>> => {
   return axios.get(`/pokemon/${id}`);
 };

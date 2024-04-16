@@ -1,10 +1,10 @@
 import { extractNumberFromUrl } from "@/utils/extractNumberFromUrl";
 import Link from "next/link";
 
-type IPokemonCardProps = { name: string; url: string };
+type IPokemonCardProps = { name: string; url?: string };
 
 const PokemonCard = ({ name, url }: IPokemonCardProps) => {
-  const pokemonNumber = extractNumberFromUrl(url);
+  const pokemonNumber = url ? extractNumberFromUrl(url) : name;
 
   return (
     <Link

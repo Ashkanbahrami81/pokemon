@@ -1,7 +1,7 @@
 import { useGetPokemon } from "@/hooks/usePokemon";
 
 type UsePokemonPageProps = {
-  id: number;
+  id: number | string;
 };
 
 const usePokemonPage = ({ id }: UsePokemonPageProps) => {
