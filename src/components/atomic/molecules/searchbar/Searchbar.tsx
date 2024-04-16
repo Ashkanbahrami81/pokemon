@@ -49,7 +49,7 @@ const Searchbar = () => {
           filteredPokemon
             .slice(0, 5)
             .map((pokemon: IPokemon) => (
-              <PokemonCard key={pokemon.name} name={pokemon.name} />
+              <PokemonCard key={pokemon.name} name={pokemon.name} noImage />
             ))
         ) : null}
       </SearchResultBox>
